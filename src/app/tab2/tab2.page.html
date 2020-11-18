@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title slot="start"> To Do </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item  style="background-color: white !important;">
+    <ion-input type="text" placeholder="Enter task" [(ngModel)]="taskName"></ion-input>
+      <ion-button slot="end">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let entry of form">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>  
+</ion-content>

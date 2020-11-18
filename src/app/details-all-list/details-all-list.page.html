@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+     <ion-title style="text-align: start;">News Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <ion-list>
+      <img src="{{dd.image_url}}"/>
+    </ion-list>
+    <p>{{dd.created_at | date: 'dd MMMM yyyy'}} | {{dd.created_at | date: 'HH:mm'}}</p>
+    <h1>{{dd.bulletin_board_title}}</h1>
+    <p></p>
+    <h1></h1>
+    <p>{{dd.bulletin_board_desc}}</p>
+  </ion-content>
+  
+  </ion-content>
+<ion-footer>
+  <ion-row>
+      <ion-col>
+          <button class="btn1"><strong>Intrested</strong></button>
+      </ion-col>
+      <ion-col>
+          <button class="btn"><strong>Not Intrested</strong></button>
+      </ion-col>
+  </ion-row>
+</ion-footer>

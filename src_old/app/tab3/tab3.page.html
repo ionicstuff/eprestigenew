@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-avatar slot="start" style="height: 25px; width: 25px;">
+        <img src="assets/icon/eye.jpg" />
+      </ion-avatar>
+      <ion-title slot="start">
+      ePrestige
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let alist of attendancelist">
+    <ion-item>
+      <ion-icon name="person-circle-outline" size="large" slot="start"></ion-icon>
+      <ion-label style="font-size: 13px;">{{alist.attendance_created_at | date: 'dd-MM-yyyy'}}</ion-label>
+      <ion-button  shape="round" size="small" color="secondary" slot="end">Comments</ion-button>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button  size="small" color="medium" fill="outline" slot="start">In: {{alist.attendance_start_time}}</ion-button>
+      <ion-button size="small" color="medium" fill="outline" slot="end">Out: {{alist.attendance_end_time}}</ion-button>
+   </ion-item>
+   <ion-card-content style="font-size: 11px;">
+      <ion-label>{{alist.attendance_signin_address}}</ion-label><br>
+      <ion-label>{{alist.attendance_signout_address}}</ion-label >
+    </ion-card-content>
+    <!-- <ion-card-content style="font-size: 12px;">
+      3rd Floor, Prestige Vihar, Scheme No 74C, Vijay Nagar, Indore, Madhya Pradesh 452010
+    </ion-card-content> -->
+  </ion-card>
+
+  
+
+     
+</ion-content>

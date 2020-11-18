@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-avatar slot="start" style="height: 25px; width: 25px;">
+        <img src="assets/icon/eye.jpg" />
+      </ion-avatar>
+      <ion-title slot="start">
+      ePrestige
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item-sliding *ngFor="let todo of todolist" class="ion-no-padding">
+      <ion-item>
+        <ion-text ion-button icon-start clear small style="margin-top: 20px; margin-left: 10px;">
+          <div style="width: 80px; height: 50px; font-weight: lighter; font-size: 13px; font-weight: 300;">{{todo.todo_date_time}}</div>
+         </ion-text>
+         <ion-label class="ion-text-wrap">
+            <div>
+              <ion-text>
+                <h3 style="font-size: 13px;">{{todo.todo_title}}</h3>
+               </ion-text>
+               <ion-text>
+                <h6 style="font-size: 10px;">{{todo.todo_category}}</h6>
+               </ion-text>
+           </div>
+           </ion-label>
+           <ion-text ion-button icon-start clear small style="padding: 5px;">
+            <ion-icon *ngIf="todo.todo_status=='0'" style="padding-right: 10px; color: lightsalmon;" name="checkmark-circle-outline"></ion-icon>
+            <ion-icon *ngIf="todo.todo_status=='1'" style="padding-right: 10px; color: gray;" name="ellipse-outline" ></ion-icon>
+            <ion-icon *ngIf="todo.todo_priority=='Normal'" name="radio-button-on-outline" style="color: green;"></ion-icon>
+            <ion-icon *ngIf="todo.todo_priority=='Urgent'" name="radio-button-on-outline" style="color: red;"></ion-icon>
+             </ion-text>
+         </ion-item>
+      <ion-item-options slot="end">
+        <ion-item-option (click)="favorite(item)" size="small">Completed</ion-item-option>
+      <ion-item-option color="danger" (click)="share(item)" size="small">Delete</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+ 
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+              <ion-fab-button color="light" (click)="sendToDo()">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+</ion-content>

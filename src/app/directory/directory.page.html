@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+     <ion-title style="text-align: start;">Directory</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-label>
+    <ion-text>
+       <ion-item>
+        <ion-label>Select Institude</ion-label>  
+           <ion-select  interface="popover" [(ngModel)]="institude" (ionChange)="selectIn()" name="institude">
+           <ion-select-option *ngFor="let gg of directory">{{gg}}</ion-select-option>
+         </ion-select>                
+       </ion-item>
+    </ion-text>
+  </ion-label>
+  <ion-item *ngFor="let ff of directory">
+    <ion-avatar item-start>
+      <img src="{{ff.image_url}}">
+      </ion-avatar>
+    <ion-label class="ion-text-wrap" style="margin: 10px;">
+      <div>
+        <ion-text>
+          <h3 class="title-style">{{ff.directory_name}}</h3>
+        </ion-text>
+        <ion-text>
+         <h6 class="subtitle-style">{{ff.directoy_category_name}}</h6>
+        </ion-text>
+      </div>
+      </ion-label>
+      <ion-text ion-button icon-start clear small style="padding: 5px;">
+        <!-- <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon> -->
+        <ion-icon (click)="presentAlertConfirm(ff.directory_mobile)" name="call-outline"></ion-icon>
+      </ion-text>
+    </ion-item>
+    
+</ion-content>

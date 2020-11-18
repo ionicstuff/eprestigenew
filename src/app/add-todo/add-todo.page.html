@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+     <ion-title style="text-align: start;">Add To-Do</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="none" style="height: 100px; width: 100%;">
+      <ion-input [(ngModel)]="add.name" name="name" type="text" placeholder="Matter..."></ion-input>
+    </ion-item>
+   <ion-item></ion-item>
+    <ion-item>
+      <ion-label>Select one</ion-label>
+      <ion-select [(ngModel)]="add.one" name="one"> 
+        <ion-select-option value="family">Family</ion-select-option>
+        <ion-select-option value="office">Office</ion-select-option>
+        <ion-select-option value="friend">Friends</ion-select-option>
+        <ion-select-option value="home">Home</ion-select-option>
+        <ion-select-option value="other">Other</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-radio-group [(ngModel)]="add.priority" name="priority">
+     <ion-item lines="none">
+        <ion-label>Normal</ion-label>
+        <ion-radio value="Normal"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Urgent</ion-label>
+        <ion-radio value="Urgent"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+      <ion-item>
+        <ion-label>Date Time</ion-label>
+        <ion-datetime [(ngModel)]="add.datetime" name="datetime" display-format="h:mm A" picker-format="h:mm A" value="h:mm A"></ion-datetime>
+      </ion-item>
+
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" (click)="send()" class="ion-no-margin">Submit</ion-button>
+    </div>
+  </form>
+
+</ion-content>

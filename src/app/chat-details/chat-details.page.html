@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chat-details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <div *ngFor="let chat of chats">
+     <ion-item lines="none" *ngIf="chat.uid !=uid">
+       <ion-label class="ion-text-left">
+          <p>{{chat.name}}</p>
+           <h2>
+             <b>
+               {{chat.msg}}
+             </b>
+           </h2>
+       </ion-label>
+     </ion-item>
+    
+    <!-- my chat -->
+     <ion-item lines="none" *ngIf="chat.uid == uid">
+      <ion-label class="ion-text-right">
+         <p>{{chat.name}}</p>
+          <h2>
+            <b>
+              {{chat.msg}}
+            </b>
+          </h2>
+      </ion-label>
+    </ion-item>
+
+   </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+        <ion-input [(ngModel)]="textMsg" placeholder="Type here..." (keyup.enter)="send()"></ion-input>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

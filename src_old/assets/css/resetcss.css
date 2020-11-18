@@ -1,0 +1,122 @@
+@charset "utf-8";
+@charset "utf-8";
+body {font-family:Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:13px; color:#aaa; background:#fff; line-height:18px;}
+img {border:none;}
+ul{padding:0; margin:0;}
+li{list-style-type:none;}
+p{line-height:18px; padding:0; margin:0;}
+a{color:#fff;}a:hover{color:#006600;}
+a, a:hover{text-decoration:none; cursor:pointer; outline:none;}
+a:focus {outline:none; outline-style:none;}
+a:hover{text-decoration:none; color:#fff;}
+h1, h2, h3, h4, h5, h6{padding:0; margin:0;}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+
+/*--------------------------------------- Fonts : Start */
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/opensans/opensans.eot');
+    src: url('../fonts/opensans/opensans.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans.woff') format('woff'),
+         url('../fonts/opensans/opensans.ttf') format('truetype'),
+         url('../fonts/opensans/opensans.svg#open-sans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'opensans-bold';
+    src: url('../fonts/opensansbold/opensans-bold.eot');
+    src: url('../fonts/opensansbold/opensans-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensansbold/opensans-bold.woff') format('woff'),
+         url('../fonts/opensansbold/opensans-bold.ttf') format('truetype'),
+         url('../fonts/opensansbold/opensans-bold.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans/opensans.eot');
+    src: url('../fonts/opensans/opensans.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans.woff') format('woff'),
+         url('../fonts/opensans/opensans.ttf') format('truetype'),
+         url('../fonts/opensans/opensans.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'open_sans_semiboldregular';
+    src: url('../fonts/opensanssemibold/opensans-semibold.eot');
+    src: url('../fonts/opensanssemibold/opensans-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensanssemibold/opensans-semibold.woff') format('woff'),
+         url('../fonts/opensanssemibold/opensans-semibold.ttf') format('truetype'),
+         url('../fonts/opensanssemibold/opensans-semibold.svg#open_sans_semiboldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'YanoneKaffeesatzBold';
+    src: url('../fonts/YanonekaffeesatzBold/yanonekaffeesatzbold-webfont.eot');
+    src: url('../fonts/YanonekaffeesatzBold/yanonekaffeesatzbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/YanonekaffeesatzBold/yanonekaffeesatzbold-webfont.woff') format('woff'),
+         url('../fonts/YanonekaffeesatzBold/yanonekaffeesatzbold-webfont.ttf') format('truetype'),
+         url('../fonts/YanonekaffeesatzBold/yanonekaffeesatzbold-webfont.svg#YanoneKaffeesatzBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'YanoneKaffeesatzLight';
+    src: url('../fonts/yanone-kaffeesatz-light/yanone-kaffeesatz-light-webfont.eot');
+    src: url('../fonts/yanone-kaffeesatz-light/yanone-kaffeesatz-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/yanone-kaffeesatz-light/yanone-kaffeesatz-light-webfont.woff') format('woff'),
+         url('../fonts/yanone-kaffeesatz-light/yanone-kaffeesatz-light-webfont.ttf') format('truetype'),
+         url('../fonts/yanone-kaffeesatz-light/yanone-kaffeesatz-light-webfont.svg#YanoneKaffeesatzLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*--------------------------------------- Fonts : End */
+/*FORM ELEMENT'S STYLES*/
+table{border-spacing:0;}
+
+/*Percent width*/
+.w25per{width:25%;} .w50per{width:50%;} .w75per{width:75%;} .w100per{width:100%;}
+
+/* Padding Measures Start*/
+/*TOP*/.pdtop5{padding-top:5px;} .pdtop10{padding-top:10px;} .pdtop15{padding-top:15px;} .pdtop20{padding-top:20px;} .pdtop25{padding-top:25px;}.pdtop30{padding-top:30px;}
+/*Right*/.pdright5{padding-right:5px;} .pdright10{padding-right:10px;} .pdright15{padding-right:15px;} .pdright20{padding-right:20px;} .pdright25{padding-right:25px;} .pdright30{padding-right:30px;}
+/*Bottom*/.pdbottom5{padding-bottom:5px;} .pdbottom10{padding-bottom:10px;} .pdbottom15{padding-bottom:15px;} .pdbottom20{padding-bottom:20px;} .pdbottom25{padding-bottom:25px;} .pdbottom30{padding-bottom:30px;}
+/*Left*/.pdleft5{padding-left:5px;} .pdleft10{padding-left:10px;} .pdleft15{padding-left:15px;} .pdleft20{padding-left:20px;} .pdleft25{padding-left:25px;} .pdleft30{padding-left:30px;}
+/* Padding Measures End*/
+
+/* Margin Measures Start*/
+/*Top*/.mrtop5{margin-top:5px;} .mrtop10{margin-top:10px;} .mrtop15{margin-top:15px;} .mrtop20{margin-top:20px;} .mrtop25{margin-top:25px;} .mrtop30{margin-top:30px;} .mrtop35{margin-top:35px;}
+/*Right*/.mrright5{margin-right:5px;} .mrright10{margin-right:10px;} .mrright15{margin-right:15px;} .mrright20{margin-right:20px;} .mrright25{margin-right:25px;} .mrright30{margin-right:30px;}
+/*Bottom*/.mrbottom5{margin-bottom:5px;} .mrbottom10{margin-bottom:10px;} .mrbottom15{margin-bottom:15px;} .mrbottom20{margin-bottom:20px;} .mrbottom25{margin-bottom:25px;} .mrbottom30{margin-bottom:30px;}
+/*Left*/.mrleft5{margin-left:5px;} .mrleft10{margin-left:10px;} .mrleft15{margin-left:15px;} .mrleft20{margin-left:20px;} .mrleft25{margin-left:25px;} .mrleft30{margin-left:30px;}
+/* Margin Measures End*/
+
+/*Radius classes begin here*/
+.d-flwstrip, .d-flwbox .btnred, .d-flwbox .btngreen, /*FORUMS*/.d-searchregion .field, .d-txteditor{border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px;}
+#admin-nav, #admin-nav li, #admin-nav li a, #main-nav, .logform table tbody tr td input[type="text"], .logform table tbody tr td input[type="password"], .btngreen, .btnred, .btnblack, .btngray, .d-lotofpony ul li a,/*ADMIN*/.d-admnav ul{border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -o-border-radius:5px;}
+#main-nav li:first-child,#main-nav li:first-child a{border-radius:5px 0 0 5px; -moz-border-radius:5px 0 0 5px; -webkit-border-radius:5px 0 0 5px; -o-border-radius:5px 0 0 5px;}
+#main-nav li + li + li + li + li ,#main-nav li + li + li + li + li a, #main-nav li:last-child ,#main-nav li:last-child a{border-radius:0 5px 5px 0; -moz-border-radius:0 5px 5px 0; -webkit-border-radius:0 5px 5px 0; -o-border-radius:0 5px 5px 0;}
+.d-jnopobox .d-jnopo{border-radius:0 4px 4px 0; -moz-border-radius:0 4px 4px 0; -webkit-border-radius:0 4px 4px 0; -o-border-radius:0 4px 4px 0;}
+/*Radius classes end here*/
+
+/*Shadow Alocation Begin*/
+#main-nav, #admin-nav, .content .d-redmsg, .content .d-greenmsg, .d-popupwindow .d-redmsg, .d-popupwindow .d-greenmsg, .d-flwstrip, .d-flwbox .btnred, .d-flwbox .btngreen, /*FORUMS*/.d-frmimg, /*SCORES*/.d-scoregallery li{box-shadow:0px 0px 3px #999; -moz-box-shadow:0px 0px 3px #999; -webkit-box-shadow:0px 0px 3px #999; -o-box-shadow:0px 0px 3px #999;}
+#main-nav li a, #admin-nav li a{text-shadow:1px 1px 1px #777;}
+.btngreen, .btnred, .d-sharebox .heading h3, .d-popupwindow .main-heading h4, .d-ophowrk h6{text-shadow:1px 1px 1px #333;}
+.btngray, .d-successnote h2, #container.d-shareregion .heading h1, .formtable .d-adphoto:hover{text-shadow:1px 1px 1px #fff;}
+.heading h1{text-shadow:0 0 10px #000;}
+.main-heading h1{text-shadow:0 0 5px #000;}
+.logwin{box-shadow:0 0 7px #000; -moz-box-shadow:0 0 7px #000; -webkit-box-shadow:0 0 7px #000; -o-box-shadow:0 0 7px #000;}
+.d-pnyinq, .d-userimg, /*FORUMS*/.d-frmbox{box-shadow:0 0 5px #666; -moz-box-shadow:0 0 5px #666; -webkit-box-shadow:0 0 5px #666; -o-box-shadow:0 0 5px #666;}
+.d-scoregallery li:hover{box-shadow:0px 0px 5px #6ABD48; -moz-box-shadow:0px 0px 5px #6ABD48; -webkit-box-shadow:0px 0px 5px #6ABD48; -o-box-shadow:0px 0px 5px #6ABD48;}/* CSS Document */
+

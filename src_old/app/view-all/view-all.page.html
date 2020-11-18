@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+     <ion-title style="text-align: start;">View-All</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-label>
+    <div style="text-align: right; margin-right: 10px;">
+      <ion-text style="text-align: end;">
+        <button ion-button round style="padding: 3px;">View All</button>
+       <ion-ripple-effect></ion-ripple-effect>
+      </ion-text>
+    
+    </div>
+   </ion-label> -->
+  <ion-card>
+     <ion-item *ngFor="let dd of bulletinlist">
+      <ion-label class="ion-text-wrap">
+        <div>
+          <ion-text>
+          <h3  style="text-align: start;font-weight: 400; font-size: 12px;">{{dd.bulletin_board_title}}</h3>
+          </ion-text>
+         <ion-text>
+          <h3  style="text-align: start;font-weight: lighter; font-size: 10px;">{{dd.bulletin_board_desc}}</h3>
+         </ion-text>
+       </div>
+       </ion-label>
+       <ion-text ion-button icon-start clear small style="padding: 5px;">
+        <h3  style="text-align: start;font-weight: 300; font-size: 10px; color: gray;">{{dd.created_at  | date: 'dd MMMM yyyy'}}</h3>
+      </ion-text>
+     </ion-item>
+    
+</ion-card>
+</ion-content>

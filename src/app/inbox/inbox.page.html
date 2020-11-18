@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-avatar slot="start" style="height: 25px; width: 25px;">
+        <img src="assets/icon/eye.jpg" />
+      </ion-avatar>
+      <ion-title slot="start">
+      ePrestige
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let ilist of inboxlist">
+    <ion-item>
+      <ion-icon name="person-circle-outline" size="large" slot="start"></ion-icon>
+      <ion-label style="font-size: 13px;">AIC News</ion-label>
+      <ion-button  fill="outline" size="small" color="secondary" slot="end">{{ilist.inbox_created_at | date: 'dd-MM-yyyy'}}</ion-button>
+    </ion-item>
+     <div style="margin-left: 10px; margin-right: 10px;">
+      <ion-label style="font-size: 11px;">Startup meeting is announced by AIC</ion-label>
+      <p style="font-size: 12px; text-align: justify;">{{ilist.inbox_message}}</p>
+     </div>
+  </ion-card>
+    </ion-content>
+<!--      
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" size="large" slot="start"></ion-icon>
+      <ion-label style="font-size: 13px;">AIC News</ion-label>
+      <ion-button  fill="outline" size="small" color="secondary" slot="end">12:35 PM</ion-button>
+    </ion-item>
+     <div style="margin-left: 10px; margin-right: 10px;">
+      <ion-label style="font-size: 11px;">Startup meeting is announced by AIC</ion-label>
+      <p style="font-size: 12px; text-align: justify;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+    
+     </div>
+     
+    
+ 
+  
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" size="large" slot="start"></ion-icon>
+      <ion-label style="font-size: 13px;">AIC News</ion-label>
+      <ion-button  fill="outline" size="small" color="secondary" slot="end">12:35 PM</ion-button>
+    </ion-item>
+     <div style="margin-left: 10px; margin-right: 10px;">
+      <ion-label style="font-size: 11px;">Startup meeting is announced by AIC</ion-label>
+      <p style="font-size: 12px; text-align: justify;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+    
+     </div>
+     
+    
+ 
+  
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" size="large" slot="start"></ion-icon>
+      <ion-label style="font-size: 13px;">AIC News</ion-label>
+      <ion-button  fill="outline" size="small" color="secondary" slot="end">12:35 PM</ion-button>
+    </ion-item>
+     <div style="margin-left: 10px; margin-right: 10px;">
+      <ion-label style="font-size: 11px;">Startup meeting is announced by AIC</ion-label>
+      <p style="font-size: 12px; text-align: justify;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+    
+     </div>
+     
+    
+ 
+  
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" size="large" slot="start"></ion-icon>
+      <ion-label style="font-size: 13px;">AIC News</ion-label>
+      <ion-button  fill="outline" size="small" color="secondary" slot="end">12:35 PM</ion-button>
+    </ion-item>
+     <div style="margin-left: 10px; margin-right: 10px;">
+      <ion-label style="font-size: 11px;">Startup meeting is announced by AIC</ion-label>
+      <p style="font-size: 12px; text-align: justify;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+    
+     </div>
+     
+    
+ 
+  
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" size="large" slot="start"></ion-icon>
+      <ion-label style="font-size: 13px;">AIC News</ion-label>
+      <ion-button  fill="outline" size="small" color="secondary" slot="end">12:35 PM</ion-button>
+    </ion-item>
+     <div style="margin-left: 10px; margin-right: 10px;">
+      <ion-label style="font-size: 11px;">Startup meeting is announced by AIC</ion-label>
+      <p style="font-size: 12px; text-align: justify;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+    
+     </div>
+     
+    
+ 
+  
+  </ion-card> -->
+
+      
+
+
+     
+
+     
+

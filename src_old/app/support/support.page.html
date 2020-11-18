@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+    <ion-title>Support</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <form>
+    <ion-item lines="inset">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+
+    <ion-item lines="inset">
+      <ion-label position="floating">Email Id</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-label position="floating">Phone No</ion-label>
+      <ion-input type="tel" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="inset">
+      <ion-label position="floating">City</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" style="height: 150px; width: 100%;">
+      <ion-textarea name="details" type="text" placeholder="Message/Suggestion/Enquiry"></ion-textarea>
+   </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block">SEND</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  
+  <ion-content>
+</ion-content>

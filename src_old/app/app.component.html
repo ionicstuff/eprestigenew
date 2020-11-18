@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="content1">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>ePrestige</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list *ngFor="let pages of navigate">
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="pages.url" routerDirection="forward">
+              <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+                 {{pages.title}} 
+          </ion-item>
+        </ion-menu-toggle>
+        </ion-list>
+       <ion-list>
+         <ion-label style="margin-left: 10px;">Others</ion-label>
+          <ion-item  (click)="presentlogout()"  lines="none" style="padding-left: 7px;">
+            <ion-icon icon="log-out-outline" style="margin-right: 20px;"></ion-icon> Logout
+          </ion-item>
+          <ion-item  (click)="presentShareApp()"  lines="none" style="padding-left: 5px;">
+            <ion-icon icon="logo-facebook" style="margin-right: 20px;"></ion-icon> Share App
+          </ion-item>
+         </ion-list>
+     </ion-content>
+    </ion-menu>
+<ion-router-outlet id="content1"></ion-router-outlet>
+</ion-app>

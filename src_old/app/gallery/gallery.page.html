@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+     <ion-title style="text-align: start;">Gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-segment color="primary" [(ngModel)]="segmentChanged">
+    <ion-segment-button value="images">
+      All Images
+    </ion-segment-button>
+    <ion-segment-button value="image">
+      My Photos
+    </ion-segment-button>
+ </ion-segment>
+  <div [ngSwitch]="segmentChanged"> 
+    <ion-list *ngSwitchCase="'images'">
+      <ion-grid>
+        <ion-row>
+           <ion-col size="4" *ngFor="let gg of alllist">
+            <ion-card>
+            <img style="height: 80px; width: fit-content;" src="{{gg.img_url}}"  />
+            </ion-card>
+            </ion-col>
+         </ion-row>
+        </ion-grid>
+    </ion-list>
+    <ion-list *ngSwitchCase="'image'">
+      <ion-grid>
+        <ion-row>
+           <ion-col size="4" *ngFor="let gg of coffeecorner">
+            <ion-card>
+            <img style="height: 80px; width: fit-content;" src="{{gg.img_url}}"  />
+            </ion-card>
+            </ion-col>
+            <!-- <ion-col>
+              <ion-card>
+                <img style="height: 80px; " src="assets/icon/placeholder.png"  />
+              </ion-card>
+              </ion-col>
+              <ion-col>
+                <ion-card>
+                  <img style="height: 80px;" src="assets/icon/placeholder.png"  />
+                </ion-card>
+                </ion-col> -->
+                
+        </ion-row>
+       
+      </ion-grid>
+    </ion-list>
+   </div>
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-forward-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+</ion-content>
+

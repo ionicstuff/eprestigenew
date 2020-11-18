@@ -1,0 +1,145 @@
+ion-content {
+  --ion-background-color: #e7e7e7 !important;
+}
+ion-list {
+  --ion-background-color: #fff !important;
+  width: 95% !important;
+  margin: 5px 0px 5px 10px;
+  -webkit-box-shadow: 0 10px 6px -6px #a0a0a0;
+  -moz-box-shadow: 0 10px 6px -6px #a0a0a0;
+  box-shadow: 0 10px 6px -6px #a0a0a0;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #e0e0e0;
+}
+.row {
+  background-color: #fff !important;
+  width: 95% !important;
+  margin: 5px 0px 5px 10px;
+  -webkit-box-shadow: 0 10px 6px -6px #a0a0a0;
+  -moz-box-shadow: 0 10px 6px -6px #a0a0a0;
+  box-shadow: 0 10px 6px -6px #a0a0a0;
+
+  border: 0px solid #e0e0e0;
+  padding: 10px !important;
+  font-size: 12px !important;
+  p {
+    margin-top: 20px;
+  }
+}
+ion-text {
+  p {
+    font-weight: bold;
+  }
+}
+ion-item {
+  ion-label {
+    font-size: 12px !important;
+  }
+}
+
+.spanBox {
+  border-right: 1px solid #000 !important;
+  width: 200px !important;
+  height: auto;
+  padding: 5px;
+  margin-top: 10px;
+}
+.section-bulletinBoard {
+  .row {
+    width: 95% !important;
+    margin: 10px 0px 10px 10px;
+    background-color: white !important;
+    padding: 10px !important;
+    align-content: center !important;
+  }
+  ion-label {
+    color: #000 !important;
+  }
+}
+
+ion-searchbar{
+  --ion-background-color: #fff !important;
+}
+
+.new-background-color {
+  --background: #3880ff;
+  color: white !important;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .card {
+    display: inline-block;
+  }
+}
+
+label {
+  margin: 0;
+}
+ion-icon {
+  color: white;
+}
+
+ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.noddy p{
+  margin-top: 0px !important;
+}
+
+.noddy h3{
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+.date-style {
+  font-size: 11px;
+  color: grey;
+  font-weight: normal;
+}
+.title-style {
+  font-weight: 300;
+  font-size: 15px;
+}
+.subtitle-style {
+  font-size: 13px;
+  color: gray;
+  font-family: "Times New Roman", Times, serif;
+}
+// .container {
+//   padding: 6px 20px;
+//   color: #646161;
+
+.latest-news {
+  --background: rgba(255, 255, 255, 0.5);
+  padding: 0px;
+  margin: 14px 0;
+  --border-radius: 14px;
+  color: #646161;
+  font-weight: 600;
+
+  ion-label {
+    padding: 6px 0;
+
+    h4 {
+      font-weight: 600;
+    }
+
+    h6 {
+      color: rgba(37, 34, 34, 0.5);
+    }
+    
+  }
+  
+}

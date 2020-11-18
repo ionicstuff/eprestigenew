@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+     <ion-title style="text-align: start;">Buy Sell</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager autoplay="5000" loop="true" speed="500" >
+    <ion-slide *ngFor="let bb of coffeecorner">
+      <img src="{{bb.img_url}}" style="width: fit-content;">
+    </ion-slide>   
+  
+  </ion-slides>
+
+  <ion-segment color="primary" [(ngModel)]="segmentChanged">
+    <ion-segment-button value="buy">
+     Buy
+    </ion-segment-button>
+    <ion-segment-button value="sell">
+      Sell
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentChanged"> 
+    <ion-list *ngSwitchCase="'buy'">
+    <ion-item *ngFor="let ff of sellList">
+        <ion-avatar item-start>
+          <img src="{{ff.img_url}}">
+          </ion-avatar>
+        <ion-label class="ion-text-wrap" style="margin: 10px;">
+          <div>
+            <ion-text>
+              <h3 >{{ff.user_name}}</h3>
+            </ion-text>
+            <ion-text>
+              <h3 class="desc">{{ff.product_name}}</h3>
+            </ion-text>
+            <ion-text>
+             <h6 class="desc">{{ff.product_desc}}</h6>
+            </ion-text>
+          </div>
+          </ion-label>
+          <ion-text ion-button icon-start clear small style="padding: 5px;">
+            <!-- <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon> -->
+            <ion-icon (click)="presentAlertConfirm(ff.mobile)" name="call-outline"></ion-icon>
+          </ion-text>
+        </ion-item>
+      <!-- <form>
+        <ion-item lines="inset">
+          <ion-input [(ngModel)]="buy.name" name="name" type="text" placeholder="Product name"></ion-input>
+        </ion-item>
+         <ion-item lines="inset">
+          <ion-input [(ngModel)]="book.price" name="price" type="text" placeholder="Product price"></ion-input>
+        </ion-item>
+        <ion-item style="margin: 10px;">
+          <ion-thumbnail slot="start">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-thumbnail>
+          <ion-label>Pick Image</ion-label>
+        </ion-item>
+        <ion-item lines="none" style="height: 100px; width: 100%;">
+          <ion-input [(ngModel)]="book.desc" name="desc" type="text" placeholder="Product description"></ion-input>
+        </ion-item>
+       <div class="ion-padding">
+          <ion-button expand="block" type="submit" (click)="sendBooks()" class="ion-no-margin">Submit</ion-button>
+        </div>
+      </form> -->
+    </ion-list>
+    <ion-list *ngSwitchCase="'sell'">
+      <form>
+        <ion-item lines="inset">
+          <ion-input [(ngModel)]="notes.name" name="name" type="text" placeholder="Product name"></ion-input>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-input [(ngModel)]="notes.price" name="price" type="text" placeholder="Product price"></ion-input>
+        </ion-item>
+        <ion-label>
+          <ion-text>
+             <ion-item>
+              <ion-label>Select Type</ion-label>  
+                 <ion-select  interface="popover" [(ngModel)]="selected_states" (ionChange)="changeStates()" name="product_type">
+                 <ion-select-option *ngFor="let gg of pList"  >{{gg}}</ion-select-option>
+               </ion-select>                
+             </ion-item>
+          </ion-text>
+        </ion-label>
+      
+        <ion-item style="margin: 10px;">
+          <ion-thumbnail slot="start">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-thumbnail>
+          <ion-label>Pick Image</ion-label>
+        </ion-item>
+        <ion-item lines="none" style="height: 100px; width: 100%;">
+          <ion-input [(ngModel)]="notes.desc" name="desc" type="text" placeholder="Product description"></ion-input>
+        </ion-item>
+       <div class="ion-padding">
+          <ion-button expand="block" type="submit" (click)="sendNotes()" class="ion-no-margin">Submit</ion-button>
+        </div>
+      </form>
+    </ion-list>
+    
+ </div>
+
+  <!-- <form [formGroup]="myForm">
+    <ion-segment formControlName="mapStyle" color="danger">
+      <ion-segment-button value="standard">
+        Standard
+      </ion-segment-button>
+      <ion-segment-button value="hybrid">
+        Hybrid
+      </ion-segment-button>
+      <ion-segment-button value="sat">
+        Satellite
+      </ion-segment-button>
+    </ion-segment>
+  </form> -->
+</ion-content>

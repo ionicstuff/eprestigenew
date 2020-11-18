@@ -1,0 +1,313 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      
+      <ion-title slot="start">
+      ePrestige
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-label>
+    <div style="margin-left: 10px; margin-top: 10px;">
+      <ion-text>
+        <p style="font-weight: bold;">Bulletin Board</p>
+      </ion-text>
+    </div>
+    </ion-label>
+    <ion-label (click)="viewAll()">
+      <div style="text-align: right; margin-right: 10px;">
+        <ion-text style="text-align: end;">
+          <button ion-button round style="padding: 3px;">View All</button>
+         <ion-ripple-effect></ion-ripple-effect>
+        </ion-text>
+      
+      </div>
+     </ion-label>
+  
+  
+     <ion-card (click)="viewAll()">
+       <ion-item *ngFor="let dd of bulletinlist">
+        <ion-label class="ion-text-wrap">
+          <div>
+            <ion-text>
+            <h3  style="text-align: start;font-weight: 400; font-size: 12px;">{{dd.bulletin_board_title}}</h3>
+            </ion-text>
+           <ion-text>
+            <h3  style="text-align: start;font-weight: lighter; font-size: 10px;">{{dd.bulletin_board_desc}}</h3>
+           </ion-text>
+         </div>
+         </ion-label>
+         <ion-text ion-button icon-start clear small style="padding: 5px;">
+          <h3  style="text-align: start;font-weight: 300; font-size: 8px; color: gray;">{{dd.created_at | date: 'dd MMMM yyyy'}}</h3>
+        </ion-text>
+       </ion-item>
+      
+  </ion-card>
+<!-- border: 2px solid #f8f8f8" -->
+
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" style="margin-top: 10px;">
+    <ion-slide *ngFor="let card of cards" style="width: 100px; height: 100px;">
+      <ion-col>
+        <div *ngIf="card=='Directory'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #059ece; border: 1px solid #ffffff;">
+          <a [routerLink]="['/directory']">
+            <ion-icon style="width: 40px; height: 40px;" name="book-outline"></ion-icon>
+       </a>
+        <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Directory</div>
+       
+      </div>
+
+      <div *ngIf="card=='Gallery'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #42c697; border: 1px solid #ffffff;">
+        <a [routerLink]="['/gallery']">
+          <ion-icon style="width: 40px; height: 40px;" name="images-outline"></ion-icon>
+     </a>
+      <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Gallery</div>
+     </div>
+
+     <div *ngIf="card=='Events'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #C0BFC5; border: 1px solid #ffffff;">
+      <a [routerLink]="['/events']">
+       <ion-icon style="width: 40px; height: 40px;" name="newspaper-outline"></ion-icon>
+      </a>
+      <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Events</div>
+     </div>
+
+     <div *ngIf="card=='News'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #4bcbdd; border: 1px solid #ffffff;">
+       <a [routerLink]="['/news']">
+        <ion-icon style="width: 40px; height: 40px;" name="newspaper-outline"></ion-icon>
+       </a>
+       <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">News</div>
+      </div>
+
+   <div *ngIf="card=='Interact'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #916f65; border: 1px solid #ffffff;">
+    <a [routerLink]="['/interact']">
+      <ion-icon style="width: 40px; height: 40px;" name="people-outline"></ion-icon>
+      </a>
+    <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Interact</div>
+    </div>
+    
+
+    <div *ngIf="card=='Buy&Sell'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #ef6cbc; border: 1px solid #ffffff;">
+      <a [routerLink]="['/buy-sell']">
+        <ion-icon style="width: 40px; height: 40px;" name="card-outline"></ion-icon>
+     </a>
+      <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Buy & Sell</div>
+       </div>
+
+       <div *ngIf="card=='Celebration'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #f4651f; border: 1px solid #ffffff;">
+        <a [routerLink]="['/celebration']">
+          <ion-icon style="width: 40px; height: 40px;" name="happy-outline"></ion-icon>
+       </a>
+        <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Celebration</div>
+         </div>
+
+         <div *ngIf="card=='Notice Board'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #d6639d; border: 1px solid #ffffff;">
+          <a [routerLink]="['/notice-board']">
+            <ion-icon style="width: 40px; height: 40px;" name="information-circle-outline"></ion-icon>
+         </a>
+          <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Notice Board</div>
+           </div>
+
+           <div *ngIf="card=='Coffee Corner'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #f7db63; border: 1px solid #ffffff;">
+            <a [routerLink]="['/coffee-corner']">
+              <ion-icon style="width: 40px; height: 40px;" name="cafe-outline"></ion-icon>
+           </a>
+            <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Coffee Corner</div>
+             </div>
+     </ion-col>
+    </ion-slide>
+  </ion-slides>
+
+
+
+ 
+  <ion-label>
+    <p style="font-weight: bold; margin-left: 10px; margin-top: 10px;">Recent's</p>
+  </ion-label>
+  <!-- <div style="font-size: 15px; text-align: start; margin-left: 10px; margin-top: 10px;">Recent's</div> -->
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+   <ion-slide *ngFor="let card of videos" style="width: 200px; height: 150px; ">
+      <ion-col>
+        <div *ngIf="card=='Sanjeev'">
+          <a [routerLink]="['/directory']">
+            <ion-card>
+              <img  src="assets/icon/webiner.jpg" />
+              <div class="subtext-size-use" style="text-align: start; font-size: 10px; padding: 4px;">Dr. davinsh jain at webinar...</div>
+            </ion-card>
+           </a>
+        </div>
+        <div *ngIf="card=='Rachit'">
+          <a>
+            <ion-card>
+              <img  src="assets/icon/webiner.jpg" />
+              <div class="subtext-size-use" style="text-align: start; font-size: 10px; padding: 4px;">Dr. davinsh jain at webinar...</div>
+            </ion-card>
+          </a>
+        </div>
+
+        <div *ngIf="card=='Vaibhav'">
+          <a>
+            <ion-card>
+              <img  src="assets/icon/webiner.jpg" />
+              <div class="subtext-size-use" style="text-align: start; font-size: 10px; padding: 4px;">Dr. davinsh jain at webinar...</div>
+            </ion-card>
+          </a>
+        </div>
+
+        <div *ngIf="card=='Kishore'">
+          <a>
+            <ion-card>
+              <img  src="assets/icon/webiner.jpg" />
+              <div class="subtext-size-use" style="text-align: start; font-size: 10px; padding: 4px;">Dr. davinsh jain at webinar...</div>
+            </ion-card>
+          </a>
+        </div>
+      </ion-col>
+    </ion-slide>
+  </ion-slides>
+
+
+
+  <ion-label>
+    <p style="font-weight: bold; margin-left: 10px; margin-top: 10px;">Use News</p>
+  </ion-label>
+  <!-- <div style="font-size: 13px; text-align: start; margin-left: 10px;">Use News</div> -->
+  <ion-item  lines="none" class="ion-no-padding" *ngFor="let ff of recentlist">
+    <ion-card no-padding no-margin>
+       <img style="width: 80px; height: 50px;" src="{{ff.img_url}}">
+     </ion-card>
+     <ion-label class="ion-text-wrap">
+        <div>
+         <ion-text>
+           <h6 class="date-style">{{ff.recent_created | date: 'dd MMMM yyyy'}}</h6>
+          </ion-text>
+         <ion-text>
+          <h3 class="title-style">{{ff.recent_title}}</h3>
+         </ion-text>
+         <ion-text>
+          <h6 class="subtitle-style">{{ff.recent_desc}}</h6>
+         </ion-text>
+       </div>
+       </ion-label>
+       <ion-text ion-button icon-start clear small style="padding: 5px;">
+         <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon>
+         <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+         </ion-text>
+     </ion-item>
+
+     <!-- <ion-item lines="none" class="ion-no-padding">
+      <ion-card no-padding no-margin>
+         <img style="width: 80px; height: 50px;" src="assets/icon/image_1.jpg">
+       </ion-card>
+       <ion-label class="ion-text-wrap">
+          <div>
+           <ion-text>
+             <h6 class="date-style">8 Aug 2020</h6>
+            </ion-text>
+           <ion-text>
+            <h3 class="title-style">Sanjeev Patni</h3>
+           </ion-text>
+           <ion-text>
+            <h6 class="subtitle-style">AIC Members</h6>
+           </ion-text>
+         </div>
+         </ion-label>
+         <ion-text ion-button icon-start clear small style="padding: 5px;">
+           <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon>
+           <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+           </ion-text>
+       </ion-item>
+
+   <ion-item lines="none" class="ion-no-padding">
+    <ion-card no-padding no-margin>
+       <img style="width: 80px; height: 50px;" src="assets/icon/image_1.jpg">
+     </ion-card>
+     <ion-label class="ion-text-wrap">
+        <div>
+         <ion-text>
+           <h6 class="date-style">8 Aug 2020</h6>
+          </ion-text>
+         <ion-text>
+          <h3 class="title-style">Sanjeev Patni</h3>
+         </ion-text>
+         <ion-text>
+          <h6 class="subtitle-style">AIC Members</h6>
+         </ion-text>
+       </div>
+       </ion-label>
+       <ion-text ion-button icon-start clear small style="padding: 5px;">
+         <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon>
+         <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+         </ion-text>
+     </ion-item>
+
+     <ion-item lines="none" class="ion-no-padding">
+      <ion-card no-padding no-margin>
+         <img style="width: 80px; height: 50px;" src="assets/icon/image_1.jpg">
+       </ion-card>
+       <ion-label class="ion-text-wrap">
+          <div>
+           <ion-text>
+             <h6 class="date-style">8 Aug 2020</h6>
+            </ion-text>
+           <ion-text>
+            <h3 class="title-style">Sanjeev Patni</h3>
+           </ion-text>
+           <ion-text>
+            <h6 class="subtitle-style">AIC Members</h6>
+           </ion-text>
+         </div>
+         </ion-label>
+         <ion-text ion-button icon-start clear small style="padding: 5px;">
+           <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon>
+           <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+           </ion-text>
+       </ion-item>
+
+       <ion-item lines="none" class="ion-no-padding">
+        <ion-card no-padding no-margin>
+           <img style="width: 80px; height: 50px;" src="assets/icon/image_1.jpg">
+         </ion-card>
+         <ion-label class="ion-text-wrap">
+            <div>
+             <ion-text>
+               <h6 class="date-style">8 Aug 2020</h6>
+              </ion-text>
+             <ion-text>
+              <h3 class="title-style">Sanjeev Patni</h3>
+             </ion-text>
+             <ion-text>
+              <h6 class="subtitle-style">AIC Members</h6>
+             </ion-text>
+           </div>
+           </ion-label>
+           <ion-text ion-button icon-start clear small style="padding: 5px;">
+             <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon>
+             <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+             </ion-text>
+         </ion-item> -->
+             
+           
+             
+
+  
+   
+  
+</ion-content>

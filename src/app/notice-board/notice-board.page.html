@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <button ion-button icon-only >
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: start;">Notice Board</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let dd of noticeboard" (click)="detailsPush(dd)">
+    <img src="{{dd.image_url}}"/>
+     <ion-card-content padding>
+      <h5>#startupday #Success</h5>
+      <ion-card-title style="font-size: 12px;">{{dd.bulletin_board_title}}
+        </ion-card-title>
+        <h5 style="font-size: 10px;">{{dd.created_at  | date: 'dd MMMM yyyy'}}</h5>
+      <p>{{dd.bulletin_board_desc}}</p>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
+
