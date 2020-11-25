@@ -33,92 +33,283 @@
 
   <section style="margin-top: 20px !important" class="section-bulletinBoard">
     <div class="row">
-      <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" style="margin-top: 10px;">
-        <ion-slide *ngFor="let card of cards" style="width: 100px; height: 100px;">
+      <ion-slides
+        [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+        style="margin-top: 10px"
+      >
+        <ion-slide
+          *ngFor="let card of cards"
+          style="width: 100px; height: 100px"
+        >
           <ion-col>
-            <div *ngIf="card=='Directory'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #059ece; border: 1px solid #ffffff;">
+            <div
+              *ngIf="card=='Directory'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #059ece;
+                border: 1px solid #ffffff;
+              "
+            >
               <a [routerLink]="['/directory']">
-                <ion-icon style="width: 40px; height: 40px;" name="book-outline"></ion-icon>
-           </a>
-            <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Directory</div>
-           
-          </div>
-    
-          <div *ngIf="card=='Gallery'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #42c697; border: 1px solid #ffffff;">
-            <a [routerLink]="['/gallery']">
-              <ion-icon style="width: 40px; height: 40px;" name="images-outline"></ion-icon>
-         </a>
-          <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Gallery</div>
-         </div>
-    
-         <div *ngIf="card=='Events'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #C0BFC5; border: 1px solid #ffffff;">
-          <a [routerLink]="['/events']">
-           <ion-icon style="width: 40px; height: 40px;" name="newspaper-outline"></ion-icon>
-          </a>
-          <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Events</div>
-         </div>
-    
-         <div *ngIf="card=='News'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #4bcbdd; border: 1px solid #ffffff;">
-           <a [routerLink]="['/news']">
-            <ion-icon style="width: 40px; height: 40px;" name="newspaper-outline"></ion-icon>
-           </a>
-           <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">News</div>
-          </div>
-    
-       <div *ngIf="card=='Interact'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #916f65; border: 1px solid #ffffff;">
-        <a [routerLink]="['/interact']">
-          <ion-icon style="width: 40px; height: 40px;" name="people-outline"></ion-icon>
-          </a>
-        <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Interact</div>
-        </div>
-        
-    
-        <div *ngIf="card=='Buy&Sell'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #ef6cbc; border: 1px solid #ffffff;">
-          <a [routerLink]="['/buy-sell']">
-            <ion-icon style="width: 40px; height: 40px;" name="card-outline"></ion-icon>
-         </a>
-          <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Buy & Sell</div>
-           </div>
-    
-           <div *ngIf="card=='Celebration'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #f4651f; border: 1px solid #ffffff;">
-            <a [routerLink]="['/celebration']">
-              <ion-icon style="width: 40px; height: 40px;" name="happy-outline"></ion-icon>
-           </a>
-            <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Celebration</div>
-             </div>
-    
-             <div *ngIf="card=='Notice Board'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #d6639d; border: 1px solid #ffffff;">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="book-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Directory
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='Gallery'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #42c697;
+                border: 1px solid #ffffff;
+              "
+            >
+              <a [routerLink]="['/gallery']">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="images-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Gallery
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='Events'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #c0bfc5;
+                border: 1px solid #ffffff;
+              "
+            >
+              <a [routerLink]="['/events']">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="newspaper-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Events
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='News'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #4bcbdd;
+                border: 1px solid #ffffff;
+              "
+            >
+              <a [routerLink]="['/news']">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="newspaper-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                News
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='Interact'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #916f65;
+                border: 1px solid #ffffff;
+              "
+            >
+              <a [routerLink]="['/interact']">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="people-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Interact
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='Buy&Sell'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #ef6cbc;
+                border: 1px solid #ffffff;
+              "
+            >
+              <a [routerLink]="['/buy-sell']">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="card-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Buy & Sell
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='Celebration'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #f4651f;
+                border: 1px solid #ffffff;
+              "
+            >
+              <a [routerLink]="['/celebration']">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="happy-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Celebration
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='Notice Board'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #d6639d;
+                border: 1px solid #ffffff;
+              "
+            >
               <a [routerLink]="['/notice-board']">
-                <ion-icon style="width: 40px; height: 40px;" name="information-circle-outline"></ion-icon>
-             </a>
-              <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Notice Board</div>
-               </div>
-    
-               <div *ngIf="card=='Coffee Corner'" style="width: 90px; height: 90px; padding-top: 15px; background-color: #f7db63; border: 1px solid #ffffff;">
-                <a [routerLink]="['/coffee-corner']">
-                  <ion-icon style="width: 40px; height: 40px;" name="cafe-outline"></ion-icon>
-               </a>
-                <div style="text-align: center; font-size: 11px; padding: 4px; color: white;">Coffee Corner</div>
-                 </div>
-         </ion-col>
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="information-circle-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Notice Board
+              </div>
+            </div>
+
+            <div
+              *ngIf="card=='Coffee Corner'"
+              style="
+                width: 90px;
+                height: 90px;
+                padding-top: 15px;
+                background-color: #f7db63;
+                border: 1px solid #ffffff;
+              "
+            >
+              <a [routerLink]="['/coffee-corner']">
+                <ion-icon
+                  style="width: 40px; height: 40px"
+                  name="cafe-outline"
+                ></ion-icon>
+              </a>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 11px;
+                  padding: 4px;
+                  color: white;
+                "
+              >
+                Coffee Corner
+              </div>
+            </div>
+          </ion-col>
         </ion-slide>
-      </ion-slides> 
+      </ion-slides>
     </div>
   </section>
   <section>
-
     <section>
       <div class="row">
-        <img src="./assets/images/middleBanner.png">
+        <img src="./assets/images/middleBanner.png" />
       </div>
     </section>
-    
-    <div class="row">
+
+    <div class="row margin-10">
       <ion-list>
-       
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="./assets/images/news/covid19.jpg">
+            <img src="./assets/images/news/covid19.jpg" />
           </ion-thumbnail>
           <ion-label class="noddy">
             <h3>Lorem ipsum</h3>
@@ -128,7 +319,7 @@
         </ion-item>
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="./assets/images/news/drone.png">
+            <img src="./assets/images/news/drone.png" />
           </ion-thumbnail>
           <ion-label class="noddy">
             <h3>Lorem ipsum</h3>
@@ -138,7 +329,7 @@
         </ion-item>
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="./assets/images/news/elearning.jpg">
+            <img src="./assets/images/news/elearning.jpg" />
           </ion-thumbnail>
           <ion-label class="noddy">
             <h3>Lorem ipsum</h3>
@@ -146,7 +337,6 @@
             <p>consectetur adipiscing elit. Duis ut urna neque.</p>
           </ion-label>
         </ion-item>
-        
       </ion-list>
     </div>
   </section>

@@ -59,13 +59,16 @@ ion-item {
   }
 }
 
-ion-searchbar{
+ion-searchbar {
   --ion-background-color: #fff !important;
 }
 
 .new-background-color {
   --background: #3880ff;
   color: white !important;
+}
+.margin-10 {
+  margin-top: 10px !important;
 }
 img {
   display: block;
@@ -94,11 +97,11 @@ ripple-parent {
   overflow: hidden;
 }
 
-.noddy p{
+.noddy p {
   margin-top: 0px !important;
 }
 
-.noddy h3{
+.noddy h3 {
   font-size: 16px !important;
   font-weight: bold !important;
 }
@@ -115,7 +118,7 @@ ripple-parent {
 .subtitle-style {
   font-size: 13px;
   color: gray;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 // .container {
 //   padding: 6px 20px;
@@ -139,7 +142,5 @@ ripple-parent {
     h6 {
       color: rgba(37, 34, 34, 0.5);
     }
-    
   }
-  
 }

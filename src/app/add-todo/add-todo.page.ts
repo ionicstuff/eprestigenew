@@ -10,72 +10,86 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./add-todo.page.scss'],
 })
 export class AddTodoPage implements OnInit {
+  add: any = {};
+  loading: any;
 
-  add:any={};
-  loading:any;
+  constructor(
+    public nav: NavController,
+    public api: ApiService,
+    public toastCtrl: ToastController,
+    public loadingCtrl: LoadingController
+  ) {}
 
- 
-  constructor(public nav : NavController,public api: ApiService,public toastCtrl:ToastController,public loadingCtrl: LoadingController) { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  send(){
-    if(this.add.name==null){
-      this.presentToast("Please enter matter")
-    }else if(this.add.one==null){
-      this.presentToast("Select one")
-    }else if(this.add.priority==null){
-      this.presentToast("Select priority")
-    }else if(this.add.datetime==null){
-      this.presentToast("Select date")
-    }else{
+  send() {
+    if (this.add.name == null) {
+      this.presentToast('Please enter matter');
+    } else if (this.add.one == null) {
+      this.presentToast('Select one');
+    } else if (this.add.priority == null) {
+      this.presentToast('Select priority');
+    } else if (this.add.datetime == null) {
+      this.presentToast('Select date');
+    } else {
       this.loaderApi();
       //console.log("date"+moment(this.add.datetime).format('HH:MM'));
-     this.senData("1",this.add.name,this.add.one,this.add.priority,moment(this.add.datetime).format('h:mm A'));
-      this.add.name='';
-      this.add.one='';
-      this.add.priority='';
-      this.add.datetime='';
-      }
+      this.senData(
+        '1',
+        this.add.name,
+        this.add.one,
+        this.add.priority,
+        moment(this.add.datetime).format('h:mm A')
+      );
+      this.add.name = '';
+      this.add.one = '';
+      this.add.priority = '';
+      this.add.datetime = '';
+    }
   }
 
-  async presentToast(status:string) {
+  async presentToast(status: string) {
     let toast = await this.toastCtrl.create({
       message: status,
       duration: 2000,
-      position: 'bottom'
+      position: 'bottom',
     });
     await toast.present();
   }
 
   async loaderApi() {
-    let _self=this;
+    let _self = this;
     _self.loading = await this.loadingCtrl.create({
-      message: 'Please wait...'
+      message: 'Please wait...',
     });
-   _self.loading.present();
+    _self.loading.present();
   }
 
-
-  async senData(id:string,name:string,one:string,priority:string,datetime:string){
-    await this.api.sendTodo(id,name,one,priority,datetime).subscribe(res =>{
-      if(res.status){
+  async senData(
+    id: string,
+    name: string,
+    one: string,
+    priority: string,
+    datetime: string
+  ) {
+    await this.api.sendTodo(id, name, one, priority, datetime).subscribe(
+      (res) => {
+        if (res.status) {
           this.loading.dismiss();
-          this.presentToast("Successfully Submitted");
-        //  this.nav.navigateForward("/tabs/tab2");
-          console.log("suceess"+res.msg);
-        }else{
-         this.presentToast(res.msg);
-         this.loading.dismiss();
+          this.presentToast('Successfully Submitted');
+          this.nav.navigateForward('/tabs/tab2');
+          console.log('suceess' + res.msg);
+        } else {
+          this.presentToast(res.msg);
+          this.loading.dismiss();
         }
-       },err =>{
-         console.log(err)
-         this.loading.dismiss();
-         //this.nav.navigateForward("/tabs/tab2");
-         this.presentToast(err.message);
-       });
-     }
-
-
+      },
+      (err) => {
+        console.log(err);
+        this.loading.dismiss();
+        //this.nav.navigateForward("/tabs/tab2");
+        this.presentToast(err.message);
+      }
+    );
+  }
 }

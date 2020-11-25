@@ -1,6 +1,10 @@
 .my-custom-class .alert-wrapper {
-    background: gray;
-  }
-
-
-  
+  background: gray;
+}
+.new-background-color {
+  --background: #3880ff;
+  color: white !important;
+}
+.margin-10 {
+  margin-top: 10px !important;
+}
