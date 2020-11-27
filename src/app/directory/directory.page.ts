@@ -30,6 +30,7 @@ export class DirectoryPage implements OnInit {
     await this.api.putDirectory(adsType).subscribe(
       (res) => {
         if (res.status) {
+          //console.log(res.response);
           _self.loading.dismiss();
           _self.directory = res.response;
         } else {

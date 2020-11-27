@@ -35,10 +35,12 @@ ion-text {
 }
 ion-item {
   ion-label {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 }
-
+.gray_bg {
+  background-color: #e5e5e5 !important;
+}
 .spanBox {
   border-right: 1px solid #000 !important;
   width: 200px !important;

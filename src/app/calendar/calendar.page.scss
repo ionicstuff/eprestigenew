@@ -1,0 +1,17 @@
+.new-background-color {
+  --background: #3880ff;
+  color: white !important;
+}
+.margin-10 {
+  margin-top: 10px !important;
+}
+.row {
+  margin: 10px !important;
+  padding: 10px !important;
+
+  ion-label {
+    font-size: 16px !important;
+    font-weight: bold;
+    color: #212121 !important;
+  }
+}

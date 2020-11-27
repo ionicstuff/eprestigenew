@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="new-background-color">
     <ion-buttons slot="start">
       <ion-back-button
         ><ion-icon ios="ios-arrow-dropleft" md="md-arrow-dropleft"></ion-icon
@@ -10,6 +10,7 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar></ion-searchbar>
   <!-- <ion-label>
     <ion-text>
       <ion-item>
@@ -48,6 +49,44 @@
         (click)="presentAlertConfirm(ff.directory_mobile)"
         name="call-outline"
       ></ion-icon>
+    </ion-text>
+  </ion-item>
+  <ion-item class="margin-10">
+    <ion-avatar item-start>
+      <img src="../../assets/images/avatar.jpg" />
+    </ion-avatar>
+    <ion-label class="ion-text-wrap" style="margin: 10px">
+      <div>
+        <ion-text>
+          <h3 class="title-style">Dr. Anil Bajpai</h3>
+        </ion-text>
+        <ion-text>
+          <h6 class="subtitle-style">Law</h6>
+        </ion-text>
+      </div>
+    </ion-label>
+    <ion-text ion-button icon-start clear small style="padding: 5px">
+      <!-- <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon> -->
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-text>
+  </ion-item>
+  <ion-item class="margin-10">
+    <ion-avatar item-start>
+      <img src="../../assets/images/avatar.jpg" />
+    </ion-avatar>
+    <ion-label class="ion-text-wrap" style="margin: 10px">
+      <div>
+        <ion-text>
+          <h3 class="title-style">Dr. Ranjana Patel</h3>
+        </ion-text>
+        <ion-text>
+          <h6 class="subtitle-style">AIC</h6>
+        </ion-text>
+      </div>
+    </ion-label>
+    <ion-text ion-button icon-start clear small style="padding: 5px">
+      <!-- <ion-icon style="padding-right: 10px;" name="chatbubble-ellipses-outline"></ion-icon> -->
+      <ion-icon name="call-outline"></ion-icon>
     </ion-text>
   </ion-item>
 </ion-content>

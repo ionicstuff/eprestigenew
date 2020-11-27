@@ -3,25 +3,35 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon
+        name="add-circle-outline"
+        size="large"
+        (click)="sendToDo()"
+      ></ion-icon>
+    </ion-buttons>
 
-    <ion-title slot="start"> To Do </ion-title>
+    <ion-title slot="start"> To Do</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-item style="background-color: white !important">
+  <!-- <ion-item style="background-color: white !important">
     <ion-input
       type="text"
       placeholder="Enter task"
       [(ngModel)]="taskName"
-    ></ion-input>
+    ></ion-input> 
     <ion-button slot="end">
       <ion-icon name="add"></ion-icon>
     </ion-button>
-  </ion-item>
+  </ion-item>-->
   <ion-list>
     <ion-item *ngFor="let entry of todolist">
-      <ion-label>{{entry.todo_title}}</ion-label>
+      <ion-label
+        [style.text-decoration]="entry.isChecked ? 'line-through' : 'none'"
+        >{{entry.todo_title}}</ion-label
+      >
       <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
     </ion-item>
   </ion-list>
